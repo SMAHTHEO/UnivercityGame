@@ -12,7 +12,6 @@ FPS = 100 # 帧数
 
 
 
-
 # 初始化数据
 image_win = Image.open(r"winner.png")
 image_zhujiangL = Image.open(r"zhujiangL.png")
@@ -174,7 +173,7 @@ def game_loop():
     show()
     # global Position
     # Position = Position + 1
-    app.win.after(MS, game_loop)
+    game_loop()
 
 
 
