@@ -8,7 +8,7 @@ import time
 screem_size = "1280x720" #分辨率
 
 diff = 0
-chance = 0.005
+chance = 0.90
 t = 0
 v = 1.0 # 速度
 
@@ -35,6 +35,7 @@ FPSS = [120,0,0,0,10]
 point = 0
 keys = 0
 show_config = True
+show_config = ~show_config
 win_now = 0
 t0 = 0
 t1 = 0
@@ -96,7 +97,7 @@ def clear(canvas):
     canvas.delete("all")
 
 def show_text(canvas,x,y,text,color = "white",size = 32,dir = 'nw'):
-    return canvas.create_text(x,y,text=text,fill=color,font =('微软雅黑',size,'bold'),width=2,anchor=dir)
+    return canvas.create_text(x,y,text=text,fill=color,font =('微软雅黑',size,'bold'),width=0,anchor=dir)
 def create_box(canvas,x1,y1,x2,y2,color = "black"):
     canvas.create_rectangle(x1,y1,x2,y2, fill=color, width = 0)
 
